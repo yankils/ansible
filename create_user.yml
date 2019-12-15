@@ -1,5 +1,8 @@
 ---
 - hosts: all
+  vars_files:
+    - user.yml
   become: true
   tasks:
-  - user: name=modi
+  - name: creating user
+    user: name={{ name }}
