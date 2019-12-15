@@ -1,0 +1,6 @@
+---
+#- name: Playbook to copy a file
+- hosts: all
+  tasks: 
+#  - name: copy a file 
+  - copy: src=/opt/playbooks/demo.txt dest=/home/ansadmin 

@@ -1,0 +1,12 @@
+---
+- name: playbook to create directory
+  hosts: webservers
+  become: true
+  tasks:
+  - name: creating a file
+    file: 
+      path: /opt/test.txt
+      state: touch 
+      mode: 0777
+      owner: ansadmin
+
