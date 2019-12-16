@@ -1,8 +1,9 @@
 ---
 - hosts: all
+  become: true
   vars_files:
     - user.yml
-  become: true
   tasks:
   - name: creating user
-    user: name={{ name }}
+    user: 
+      name: "{{ name }}"
